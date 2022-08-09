@@ -1,6 +1,10 @@
+//OPEN 2 TERMINAL TABS one for server(BE) one for client(FE) :))
+
 import "./App.css";
 import { useState, useEffect } from "react";
 import Axios from "axios";
+
+//Axios is a simple library that helps us write FE APIs
 
 function App() {
   const [usersList, setusersList] = useState([]);
@@ -30,9 +34,12 @@ function App() {
     });
   };
 
+
+  //map all the users in the usersList to HTML elements (divs)
   return (
     <div className="App">
       <div className="usersDisplay">
+        
         {usersList.map((user) => {
           return (
             <div>
